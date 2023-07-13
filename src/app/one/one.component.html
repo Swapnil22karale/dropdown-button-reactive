@@ -1,0 +1,35 @@
+<form>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" #fname>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" #lname>
+            </div>
+        </div>
+        <div class="form-group col-md 6">
+            <label for="inputState">How should we contact you?</label>
+            <br>
+            <select class="select" (change)='dropdownform($event)'>
+                <option class="form-group" value="selected">Choose option</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>        
+            </select>
+            <div class="form-group" [class.d-none]="isHide">
+                <label for="Contact">Phone</label>
+                <input type="text" class="form-control" value="phone" #phone>
+            </div>        
+            <div class="form-group" [class.d-none]="isHide1">
+                <label for="email">Email</label>
+                <input type="text" class="form-control"  value="email" #email>
+            </div>             
+        </div>      
+    </div> 
+    </form>
+    
+    
